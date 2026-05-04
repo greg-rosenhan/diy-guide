@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIY Growth Guide for Tour Operators</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:#fff;color:#1a1a1a;line-height:1.7}
+.nav{background:#1a1a1a;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nav-cta{background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap}
+.hero{background:#111;padding:80px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 70% 50%,rgba(232,57,14,.08) 0%,transparent 60%);pointer-events:none}
+.hero-badge{display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:6px 16px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-size:52px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:800px;margin-left:auto;margin-right:auto}
+.hero h1 span{color:#F5A623}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.7);max-width:600px;margin:0 auto 36px}
+.hero-cta{display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none}
+.hero-cta-sec{display:inline-block;background:transparent;color:#fff;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.3)}
+.stats-bar{background:linear-gradient(90deg,#E8390E,#F5A623);padding:14px 40px 20px;display:flex;justify-content:center;gap:60px;flex-wrap:wrap;align-items:center}
+.stat-item{text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:#fff}
+.stat-label{font-size:11px;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.section{padding:60px 40px;max-width:960px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F97316;margin-bottom:12px}
+.section-title{font-size:36px;font-weight:800;line-height:1.2;margin-bottom:16px}
+.toc{background:#1a1a1a;padding:60px 40px}
+.toc-inner{max-width:960px;margin:0 auto}
+.toc-title{color:#fff;font-size:28px;font-weight:800;margin-bottom:8px}
+.toc-sub{color:rgba(255,255,255,.5);font-size:15px;margin-bottom:36px}
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.toc-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:20px;text-decoration:none;display:block;transition:background .2s,transform .2s,border-color .2s;cursor:pointer}
+.toc-card:hover{background:rgba(232,57,14,.18);border-color:rgba(245,166,35,.5);transform:translateY(-3px)}
+.toc-num{font-size:32px;font-weight:800;color:#F5A623;line-height:1;margin-bottom:8px}
+.toc-stage{font-size:14px;font-weight:700;color:#fff;margin-bottom:4px}
+.toc-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5}
+.stage-header{padding:60px 40px 0}
+.stage-header-inner{max-width:960px;margin:0 auto;padding-bottom:40px;border-bottom:2px solid #f0f0f0}
+.stage-badge{background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:4px;display:inline-block;margin-bottom:10px}
+.stage-title{font-size:40px;font-weight:800;line-height:1.1;margin-bottom:12px}
+.stage-desc{font-size:17px;color:#555;max-width:680px;margin-bottom:24px}
+.core-question{background:#1a1a1a;border-radius:10px;padding:20px 24px;display:inline-block;margin-top:8px}
+.core-question-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F5A623;margin-bottom:6px}
+.core-question-text{font-size:17px;font-weight:700;color:#fff;line-height:1.4}
+.sub-stage{display:flex;align-items:center;gap:12px;margin:40px 0 20px}
+.sub-stage-line{flex:1;height:1px;background:#e8e8e4}
+.sub-stage-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1a1a1a;white-space:nowrap}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin:24px 0}
+.card{background:#fff;border:1px solid #e8e8e4;border-radius:12px;padding:24px}
+.card-title{font-size:16px;font-weight:700;margin-bottom:8px}
+.card-body{font-size:14px;color:#666;line-height:1.6}
+.stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:28px 0}
+.stat-card{background:#fff;border:1px solid #e8e8e4;border-radius:10px;padding:20px;text-align:center}
+.stat-card-num{font-size:30px;font-weight:800;color:#F97316;line-height:1}
+.stat-card-label{font-size:12px;color:#888;margin-top:6px;line-height:1.4}
+.callout{background:#fff8f3;border-left:4px solid #F97316;border-radius:0 8px 8px 0;padding:20px 24px;margin:28px 0}
+.callout-text{font-size:17px;font-style:italic;color:#333;line-height:1.7}
+.callout-attr{font-size:13px;color:#888;margin-top:8px;font-style:normal;font-weight:600}
+.case-study{background:#1a1a1a;border-radius:14px;padding:36px;margin:36px 0;color:#fff}
+.cs-eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F5A623;margin-bottom:10px}
+.cs-title{font-size:22px;font-weight:800;margin-bottom:8px}
+.cs-desc{font-size:15px;color:rgba(255,255,255,.65);margin-bottom:24px;line-height:1.7}
+.cs-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:20px}
+.cs-stat-num{font-size:26px;font-weight:800;color:#F5A623}
+.cs-stat-label{font-size:12px;color:rgba(255,255,255,.5)}
+.cs-quote{font-style:italic;font-size:15px;color:rgba(255,255,255,.75);border-top:1px solid rgba(255,255,255,.1);padding-top:16px;line-height:1.7}
+.cs-link{display:inline-block;margin-top:16px;color:#F5A623;font-size:13px;font-weight:600;text-decoration:none}
+.checklist{list-style:none;margin:20px 0}
+.checklist li{list-style:none;padding:10px 0 10px 32px;position:relative;border-bottom:1px solid #f0f0f0;font-size:15px;color:#333;cursor:pointer;user-select:none;transition:color .15s ease}
+.checklist li::before{content:'';position:absolute;left:0;top:13px;width:18px;height:18px;border-radius:50%;background:transparent;border:2px solid #F97316;transition:background .15s ease,border-color .15s ease;box-sizing:border-box}
+.checklist li::after{content:'';position:absolute;left:5px;top:17px;width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg);opacity:0;transition:opacity .15s ease}
+.checklist li:hover::before{background:rgba(249,115,22,.12)}
+.checklist li.checked{color:#888;text-decoration:line-through}
+.checklist li.checked::before{background:#F97316;border-color:#F97316}
+.checklist li.checked::after{opacity:1}
+.bullet-list{list-style:none;margin:16px 0}
+.bullet-list li{padding:8px 0 8px 24px;position:relative;font-size:15px;color:#333;border-bottom:1px solid #f0f0f0}
+.bullet-list li::before{content:'';position:absolute;left:0;top:16px;width:8px;height:8px;border-radius:50%;background:#F97316}
+.podcast-ref{background:#f0f7ff;border:1px solid #cde0f5;border-radius:10px;padding:16px 20px;margin:24px 0;display:flex;align-items:center;gap:16px}
+.podcast-icon{width:40px;height:40px;background:#F97316;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.podcast-icon svg{width:20px;height:20px;fill:#fff}
+.podcast-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#F97316}
+.podcast-title{font-size:14px;font-weight:600;color:#1a1a1a;margin-top:2px}
+.podcast-link{font-size:13px;color:#2563eb;text-decoration:none;margin-top:2px;display:block}
+.cta-block{background:linear-gradient(135deg,#E8390E 0%,#F5A623 100%);border-radius:16px;padding:48px;text-align:center;margin:48px 0}
+.cta-block h3{font-size:28px;font-weight:800;color:#fff;margin-bottom:12px;margin-top:0}
+.cta-block p{font-size:16px;color:rgba(255,255,255,.85);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-block;background:#fff;color:#E8390E;padding:14px 32px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none}
+.steps{margin:24px 0}
+.step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.step-num{width:36px;height:36px;min-width:36px;background:linear-gradient(135deg,#E8390E,#F5A623);color:#fff;border-radius:50%;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.step-content{flex:1}
+.step-content h4{font-size:16px;font-weight:700;margin-bottom:4px;margin-top:0}
+.step-content p{font-size:14px;color:#666;line-height:1.6;margin-bottom:0}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:680px){.two-col{grid-template-columns:1fr}}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+.pros{background:#f0faf4;border:1px solid #bbdfc8;border-radius:10px;padding:20px}
+.cons{background:#fff5f5;border:1px solid #f5c6c6;border-radius:10px;padding:20px}
+.pros h4,.cons h4{font-size:14px;font-weight:700;margin-bottom:10px;margin-top:0}
+.pros h4{color:#166534}
+.cons h4{color:#991b1b}
+.pros ul,.cons ul{list-style:none}
+.pros li,.cons li{font-size:13px;color:#444;padding:4px 0 4px 16px;position:relative;line-height:1.5}
+.pros li::before{content:'+';position:absolute;left:0;color:#16a34a;font-weight:700}
+.cons li::before{content:'–';position:absolute;left:0;color:#dc2626;font-weight:700}
+.checklist-box{background:#fff;border:1px solid #e8e8e4;border-radius:12px;padding:28px;margin:32px 0}
+.checklist-category{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#F97316;margin-bottom:16px;margin-top:0}
+.checklist-category-after{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#F97316;margin-bottom:16px;margin-top:24px}
+.divider{border:none;border-top:1px solid #e8e8e4;margin:0}
+.footer{background:#1a1a1a;padding:48px 40px;text-align:center}
+.footer-logo{font-size:22px;font-weight:800;color:#fff;margin-bottom:12px}
+.footer-logo span{color:#F5A623}
+.footer p{color:rgba(255,255,255,.5);font-size:14px;margin-bottom:20px}
+.footer-cta{display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none}
+.screenshot{width:100%;border-radius:12px;border:1px solid #e8e8e4;margin:28px 0;display:block}
+.screenshot-dark{width:100%;border-radius:12px;margin:28px 0;display:block}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin:32px 0}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+p{margin-bottom:16px}
+h3{font-size:22px;font-weight:700;margin-bottom:12px;margin-top:36px}
+h4{font-size:17px;font-weight:700;margin-bottom:8px;margin-top:24px}
+strong{font-weight:700}
+a{color:#F97316}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div><img src="Pictures/RESMARK Logo.png" style="height:36px;width:auto;object-fit:contain;" alt="Resmark Logo"></div>
+  <a href="https://www.resmarksystems.com/demo-request?utm_source=Lead+Magnet&utm_medium=Landing+Page&utm_campaign=diy+2026" class="nav-cta">Book a Free Coaching Session</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">2026 Edition</div>
+  <h1>The DIY Guide to Growing Your<br><span>Tour Business Online</span></h1>
+  <p class="hero-sub">A step-by-step playbook built around the Resmark Growth Engine — the same framework used to grow a $15M+ tour company and hundreds of operators like yours.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px;">
+    <a href="https://www.resmarksystems.com/growth-engine-survey?utm_source=Lead+Magnet&utm_medium=Landing+Page&utm_campaign=diy+2026" class="hero-cta">Get Your Free Growth Score</a>
+    <a href="https://www.resmarksystems.com/demo-request?utm_source=Lead+Magnet&utm_medium=Landing+Page&utm_campaign=diy+2026" class="hero-cta-sec">Book a Free Coaching Session</a>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div style="text-align:center;color:#fff;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;width:100%;margin-bottom:0;opacity:.85;">When following this framework, here's what operators are achieving</div>
+  <div class="stat-item"><div class="stat-num">400%+</div><div class="stat-label">ROAS Achieved</div></div>
+  <div class="stat-item"><div class="stat-num">32%+</div><div class="stat-label">Conversion Rate Increase</div></div>
+  <div class="stat-item"><div class="stat-num">40%+</div><div class="stat-label">Sales from SEO Strategy</div></div>
+</div>
+
+<div style="background:#f8f8f6;">
+<div class="section">
+  <div class="section-label">Welcome</div>
+  <div class="two-col">
+    <div><h2 class="section-title">This guide was built for operators who are serious about growth.</h2></div>
+    <div>
+      <p style="font-size:16px;color:#555;line-height:1.8;margin-bottom:16px;">If you're running an established outdoor adventure business — rafting, hiking, multi-day expeditions, guided tours — and you're ready to stop guessing and start building a system that produces consistent, measurable bookings, you're in the right place.</p>
+      <p style="font-size:16px;color:#555;line-height:1.8;">This guide is built around the <strong>Resmark Growth Engine</strong>, a framework developed by operators who built and grew a $15M+ tour company, then used those same strategies to help hundreds of other operators do the same.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <div class="toc-inner">
+    <div class="toc-title">The Resmark Growth Engine</div>
+    <div class="toc-sub">Five stages. Each with proven strategies. All working together.</div>
+    <div class="toc-grid">
+      <a href="#stage1" class="toc-card"><div class="toc-num">01</div><div class="toc-stage">Dreaming</div><div class="toc-desc">AI search, paid & organic social, video, referrals, print, OTAs, and resellers</div></a>
+      <a href="#stage2" class="toc-card"><div class="toc-num">02</div><div class="toc-stage">Planning</div><div class="toc-desc">Website conversion, lead capture, nurture sequences, and remarketing</div></a>
+      <a href="#stage3" class="toc-card"><div class="toc-num">03</div><div class="toc-stage">Booking</div><div class="toc-desc">Online and offline booking, product pages, checkout optimization, and upsells</div></a>
+      <a href="#stage4" class="toc-card"><div class="toc-num">04</div><div class="toc-stage">Experiencing</div><div class="toc-desc">Confirmation, post-purchase messages, pre-trip communications, and trip delivery</div></a>
+      <a href="#stage5" class="toc-card"><div class="toc-num">05</div><div class="toc-stage">Sharing</div><div class="toc-desc">Review sequences, monitoring, post-trip messages, merchandise, and UGC</div></a>
+    </div>
+  </div>
+</div>
+
+<!-- Growth Engine Video -->
+<div style="background:#f8f8f6;padding:48px 40px 0;">
+  <div style="max-width:960px;margin:0 auto;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F97316;margin-bottom:10px;"><a href="https://youtu.be/SZfW_XtPJEA?si=RJh789-SMppqtaI0" target="_blank" style="color:#F97316;text-decoration:none;">Watch the Overview ↗</a></div>
+    <div style="font-size:24px;font-weight:800;margin-bottom:8px;">The Resmark Growth Engine: All 5 Stages Explained</div>
+    <p style="font-size:15px;color:#555;margin-bottom:0;">A full walkthrough of the framework before we dive into each stage.</p>
+    <div style="margin:32px 0;border-radius:12px;overflow:hidden;">
+      <video controls style="width:100%;display:block;border-radius:12px;" preload="metadata">
+        <source src="Pictures/The 5 Stages Every Tour Business Must Build to Grow with Brandon Lake.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- STAGE 1 -->
+<div id="stage1" class="stage-header">
+  <div class="stage-header-inner">
+    <div class="stage-badge">Stage 01</div>
+    <h2 class="stage-title">Dreaming: How People Discover You</h2>
+    <p class="stage-desc">This is all about visibility and first impressions. Before anyone can book with you, they have to find you — often before they even know they want what you offer. If you're not showing up here, nothing else in the Growth Engine matters.</p>
+    <div class="core-question">
+      <div class="core-question-label">Core Question</div>
+      <div class="core-question-text">Can the right people find you when they're deciding what to do?</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">3x</div><div class="stat-card-label">More likely to book after seeing a brand across multiple channels</div></div>
+    <div class="stat-card"><div class="stat-card-num">527%</div><div class="stat-card-label">Growth in AI search traffic year over year</div></div>
+    <div class="stat-card"><div class="stat-card-num">5–7</div><div class="stat-card-label">Touchpoints needed before most travelers make a booking decision — so show up everywhere</div></div>
+    <div class="stat-card"><div class="stat-card-num">64%</div><div class="stat-card-label">Of travelers say social media inspires their travel decisions</div></div>
+  </div>
+
+  <div class="sub-stage"><div class="sub-stage-line"></div><div class="sub-stage-label">Dreaming — Internal</div><div class="sub-stage-line"></div></div>
+
+  <h3>AI + Search (Organic)</h3>
+  <p>Organic search is the foundation of your long-term visibility. When someone types "whitewater rafting in Utah" or "best guided hiking tours Grand Canyon" into Google — or increasingly into ChatGPT, Perplexity, or Gemini — you need to show up at the top. Strong SEO powers both traditional search rankings and your AI search presence simultaneously.</p>
+
+  <h4>What actually moves the needle in 2026:</h4>
+  <ul class="bullet-list">
+    <li>One strong H1 per page targeting your primary keyword</li>
+    <li>Meta titles with primary keyword + location + brand name</li>
+    <li>Schema markup for tours, reviews, and FAQs</li>
+    <li>Fast-loading, mobile-first design — Google penalizes slow sites</li>
+    <li>Quality backlinks from tourism boards, travel blogs, and local partners</li>
+    <li>Helpful, intent-matched blog content and travel guides written for humans, not algorithms</li>
+    <li>Google Business Profile fully set up, verified, and updated monthly</li>
+  </ul>
+
+  <div class="case-study">
+    <div class="cs-eyebrow">Case Study</div>
+    <div class="cs-title">Four Season Guides — How Strong SEO Means Spending Less on Ads</div>
+    <div class="cs-desc">Based in Flagstaff, AZ, Four Season Guides leads hiking and backpacking trips across the Southwest. Their story is a perfect example of what happens when SEO is done right: organic visibility grows, reliance on paid ads shrinks, and revenue goes up — not down. What made the difference wasn't just "doing SEO" — it was committing to a strategy that is constantly growing and evolving. Rankings don't maintain themselves. The operators winning in search are the ones treating SEO as an ongoing investment, not a one-time project.</div>
+    <div class="cs-stats">
+      <div class="cs-stat"><div class="cs-stat-num">110%</div><div class="cs-stat-label">Increase in organic clicks YoY</div></div>
+      <div class="cs-stat"><div class="cs-stat-num">34%</div><div class="cs-stat-label">Improvement in avg keyword position</div></div>
+      <div class="cs-stat"><div class="cs-stat-num">35%</div><div class="cs-stat-label">Reduction in monthly ad spend</div></div>
+      <div class="cs-stat"><div class="cs-stat-num">590K</div><div class="cs-stat-label">Impressions (up from 149K)</div></div>
+    </div>
+    <div class="cs-quote">"We cut our monthly ad spend by about 35% and we haven't seen a drop in customer count. In fact, we've seen an increase in revenue." — Dave Logan, Owner</div>
+    <a href="https://www.resmarkweb.com/four-season-guides-case-study" class="cs-link">Read the full case study →</a>
+  </div>
+
+  <div class="podcast-ref">
+    <div class="podcast-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-1 13V8l6 4-6 4z"/></svg></div>
+    <div class="podcast-text">
+      <div class="podcast-label">Go Deeper</div>
+      <div class="podcast-title">Why SEO Is the Foundation of Tour Business Growth</div>
+      <a href="https://www.resmarkweb.com/podcast/why-seo-is-the-foundation-of-tour-business-growth" class="podcast-link">resmarkweb.com/podcast/why-seo-is-the-foundation-of-tour-business-growth →</a>
+    </div>
+  </div>
+
+  <h3>AI + Search (Paid)</h3>
+  <p>Paid search ads are optimized across Google and AI platforms for high return on ad spend. SEO builds long-term visibility — paid ads fill the gap while you're building it and amplify results once you have it.</p>
+
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">400%+</div><div class="stat-card-label">ROAS achieved for Virgin Island Ecotours — $3K spent, $31K+ tracked in one month</div></div>
+    <div class="stat-card"><div class="stat-card-num">46%</div><div class="stat-card-label">Of all clicks go to the top 3 paid search results</div></div>
+  </div>
+
+  <img src="Pictures/Google Ads.png" style="width:100%;height:auto;border-radius:12px;margin:28px 0;display:block;object-fit:contain;" alt="Google Ads Dashboard — Virgin Islands Ecotours">
+
+  <div class="callout">
+    <div class="callout-text">What those numbers mean: <strong>ROAS</strong> (Return on Ad Spend) shows how many dollars you earned for every dollar spent. <strong>Conversions</strong> are completed bookings tracked through your ads. <strong>CPC</strong> (Cost Per Click) is what you pay each time someone clicks your ad. When Google Ads are run effectively with a solid budget and the right strategy, the ROI speaks for itself — but don't just throw money at Google Ads. You need to know what you're doing, and it needs to make sense for your business at this stage of growth.</div>
+  </div>
+
+  <h4>When paid search makes sense:</h4>
+  <div class="card-grid">
+    <div class="card"><div class="card-title">Does your website convert?</div><div class="card-body">Fix conversion first. Paid ads send traffic — if your site can't convert it, you're paying to lose people.</div></div>
+    <div class="card"><div class="card-title">Do you have a revenue gap?</div><div class="card-body">If organic is tracking toward $500K and your goal is $1M, paid search bridges that gap fast.</div></div>
+    <div class="card"><div class="card-title">Do you have capacity?</div><div class="card-body">Don't run ads if you can't handle the volume. Overbooking destroys what good marketing builds.</div></div>
+    <div class="card"><div class="card-title">Do you have a nurture system?</div><div class="card-body">96% won't book on the first visit. Without follow-up, most of your ad spend walks out the door.</div></div>
+  </div>
+
+  <p style="background:#fff8f3;border-left:4px solid #F97316;border-radius:0 8px 8px 0;padding:16px 20px;margin:20px 0;font-size:15px;color:#333;font-weight:600;">Did you answer yes to all 4 of these? If so, paid search ads could be a great avenue for your business — one that pays for itself when run the right way.</p>
+
+  <div class="podcast-ref">
+    <div class="podcast-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-1 13V8l6 4-6 4z"/></svg></div>
+    <div class="podcast-text">
+      <div class="podcast-label">Go Deeper</div>
+      <div class="podcast-title">Profitable Paid Ads for Tour Operators</div>
+      <a href="https://www.resmarkweb.com/podcast/profitable-paid-ads-tour-operators" class="podcast-link">resmarkweb.com/podcast/profitable-paid-ads-tour-operators →</a>
+    </div>
+  </div>
+
+  <h3>Social (Organic)</h3>
+  <p>Your organic social strategy actively reaches and drives traffic from new ideal audiences — at zero media cost. Social media puts your brand in front of people in the exact moment they're dreaming, before they've decided where to go or who to book with.</p>
+
+  <div class="callout">
+    <div class="callout-text">"I was scrolling and saw these beautiful Iberian lynx in Spain and thought — wait, you can actually go see these on a tour? That was it. I was booking a trip to Spain months later, all because of one social media post."</div>
+    <div class="callout-attr">— Nikki, Marketing Director of ResmarkWeb</div>
+  </div>
+
+  <h4>What works right now:</h4>
+  <ul class="bullet-list">
+    <li>Short-form video outperforms everything — even a simple pan of a river can get 1.5M views</li>
+    <li>Give guides a small incentive ($20–30) to capture and submit content from trips</li>
+    <li>Behind-the-scenes content drives engagement: gear prep, morning conditions, guide moments</li>
+    <li>Guest reactions — first-time zipliners, kids catching fish, couples on anniversaries</li>
+    <li>Post 5–6 times per week minimum; daily is better</li>
+    <li>Captions matter — the algorithm reads them; keep them natural and keyword-relevant</li>
+  </ul>
+
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">1.5M</div><div class="stat-card-label">Views on a single guide-captured video — Western River Expeditions, $20 incentive</div></div>
+    <div class="stat-card"><div class="stat-card-num">7</div><div class="stat-card-label">Average touchpoints needed before a prospect makes a purchase decision — so post often and consistently</div></div>
+  </div>
+
+  <img src="Pictures/Four Season Guides Instagram.png" style="width:100%;height:auto;border-radius:12px;margin:28px 0;display:block;object-fit:contain;" alt="Four Season Guides — Instagram Profile">
+
+  <div class="podcast-ref">
+    <div class="podcast-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-1 13V8l6 4-6 4z"/></svg></div>
+    <div class="podcast-text">
+      <div class="podcast-label">Go Deeper</div>
+      <div class="podcast-title">Social Media Marketing for Tour Operators</div>
+      <a href="https://www.resmarkweb.com/podcast/social-media-marketing-tour-operators" class="podcast-link">resmarkweb.com/podcast/social-media-marketing-tour-operators →</a>
+    </div>
+  </div>
+
+  <h3>Social (Paid)</h3>
+  <p>Paid social ads on Facebook and Instagram allow you to reach cold audiences who match your ideal guest profile — and retarget warm audiences who've already shown interest. Unlike search ads, paid social meets guests while they're scrolling, not searching. The creative does the heavy lifting.</p>
+  <ul class="bullet-list">
+    <li>Top of funnel — branding and awareness ads to cold lookalike audiences</li>
+    <li>Middle of funnel — retargeting people who engaged with your social content</li>
+    <li>Bottom of funnel — retargeting website visitors and past guests with direct offers</li>
+    <li>Authentic video and real guest content dramatically outperforms stock imagery</li>
+    <li>Run a sequence of 3–4 ads — reminder, social proof, urgency — for warm audiences</li>
+    <li>Start with Facebook Feed and Instagram Stories for best budget efficiency</li>
+  </ul>
+
+  <h3>Video (Organic)</h3>
+  <p>Organic video content on Instagram Reels, TikTok, and YouTube is one of the highest-reach, lowest-cost channels available to tour operators. Viewers retain 95% of a video message vs 10% when reading — and the algorithm actively distributes good video to people who haven't followed you yet.</p>
+  <ul class="bullet-list">
+    <li>The first 3 seconds determine everything — hook people immediately or they're gone</li>
+    <li>Micro-education performs extremely well: "Why river levels change daily," "What to pack for your first raft trip"</li>
+    <li>Guest reaction videos are nearly impossible to fake and incredibly persuasive</li>
+    <li>Add captions — most people watch without sound, especially on mobile</li>
+    <li>One great video can be cut into 5–10 pieces of content across platforms</li>
+  </ul>
+
+  <h3>Video (Paid)</h3>
+  <p>Paid video ads — on YouTube, Facebook, and Instagram — allow you to reach targeted audiences with immersive, story-driven content before they ever search for you.</p>
+  <ul class="bullet-list">
+    <li>YouTube pre-roll ads target users watching related travel and outdoor content</li>
+    <li>Facebook and Instagram video ads in-feed stop the scroll better than static images</li>
+    <li>Keep paid video ads under 30 seconds — get to the hook fast</li>
+    <li>Use your best organic video content as paid ads — if it worked organically, amplify it</li>
+  </ul>
+
+  <h3>Referral</h3>
+  <p>Word of mouth is still one of the most powerful booking drivers in the tour industry — and most operators do nothing to systematize it.</p>
+  <ul class="bullet-list">
+    <li>Ask for referrals explicitly — most guests are happy to share but need to be prompted</li>
+    <li>Offer a meaningful incentive: a discount on their next trip, a gift card, or a charitable donation in their name</li>
+    <li>Make sharing easy — a one-click referral link in your post-trip email sequence</li>
+    <li>Track referral sources in your CRM so you know which guests are your best advocates</li>
+  </ul>
+
+  <h3>Print & Direct Mail</h3>
+  <p>Print is making a comeback — especially for higher-value, longer-duration tours where guests invest more time in the decision.</p>
+  <ul class="bullet-list">
+    <li>Targeted direct mail to past guests and high-value zip codes still generates strong response rates</li>
+    <li>Print ads in regional travel and outdoor publications reach an engaged, self-selected audience</li>
+    <li>Include a QR code or unique URL to track response and conversions from print</li>
+    <li>Use print as a differentiator — if your competitors aren't doing it, you stand out immediately</li>
+  </ul>
+
+  <div style="margin:32px 0;border-radius:12px;overflow:hidden;">
+    <video controls style="width:100%;display:block;border-radius:12px;" preload="metadata">
+      <source src="Pictures/Why Print Marketing Is Making a Comeback for Tour Operators.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="sub-stage"><div class="sub-stage-line"></div><div class="sub-stage-label">Dreaming — External</div><div class="sub-stage-line"></div></div>
+
+  <h3>OTAs</h3>
+  <p>Online travel agencies like Viator, TripAdvisor, and GetYourGuide are legitimate discovery channels. Be listed, be optimized, but don't be dependent.</p>
+  <div class="callout">
+    <div class="callout-text">"Last year, less than 5% of our bookings came from OTAs. I stay listed because people find us there and then book direct."</div>
+    <div class="callout-attr">— Rhees Jackson, Expedition Kanab</div>
+  </div>
+  <div class="pros-cons">
+    <div class="pros"><h4>Reasons to be on OTAs</h4><ul><li>Instant visibility with unfamiliar travelers</li><li>Strong for European travelers (GetYourGuide)</li><li>OTA reviews can drive direct bookings</li><li>Low barrier to getting started</li></ul></div>
+    <div class="cons"><h4>Reasons to reduce dependency</h4><ul><li>25–30% commission on every booking</li><li>Limited access to guest data and emails</li><li>Hard to nurture for repeat bookings</li><li>Guest loyalty goes to the OTA, not you</li></ul></div>
+  </div>
+
+  <div class="podcast-ref">
+    <div class="podcast-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-1 13V8l6 4-6 4z"/></svg></div>
+    <div class="podcast-text">
+      <div class="podcast-label">Go Deeper</div>
+      <div class="podcast-title">OTAs vs Direct Bookings</div>
+      <a href="https://www.resmarkweb.com/podcast/otas-vs-direct-bookings" class="podcast-link">resmarkweb.com/podcast/otas-vs-direct-bookings →</a>
+    </div>
+  </div>
+
+  <h3>Other Resellers</h3>
+  <p>Local partners — hotels, concierge teams, travel agents, DMCs, and corporate event planners — are one of the most underutilized growth channels in the entire industry.</p>
+  <div class="callout">
+    <div class="callout-text">"My top 10 agents were worth over $1.2 million a year — some sending $150K–$200K individually. Once you build that machine, it delivers predictable revenue six to nine months in advance."</div>
+    <div class="callout-attr">— Josh Oakes, The Sunshine Tribe & Former Tour Operator</div>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Build a partner pack</h4><p>A one-pager with tour descriptions, pricing, availability, cancellation policy, and high-res images.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Create a short training video</h4><p>A 60–90 second walkthrough of your best tours that a concierge can play for a guest on the spot.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Build an automated nurture sequence</h4><p>A 12-week sequence that keeps you in front of partners with guest stories, highlights, and seasonal offers.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Track it like any other channel</h4><p>Partner name, status, inquiries, bookings. Measure it. Partners who aren't producing get more attention or get replaced.</p></div></div>
+  </div>
+
+  <div class="podcast-ref">
+    <div class="podcast-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-1 13V8l6 4-6 4z"/></svg></div>
+    <div class="podcast-text">
+      <div class="podcast-label">Go Deeper</div>
+      <div class="podcast-title">Local Reseller Partnerships for Tour Operators</div>
+      <a href="https://www.resmarkweb.com/podcast/local-reseller-partnerships-tour-operators" class="podcast-link">resmarkweb.com/podcast/local-reseller-partnerships-tour-operators →</a>
+    </div>
+  </div>
+
+  <h3>Dreaming Stage Checklist</h3>
+  <p style="font-size:16px;color:#555;margin-bottom:4px;">Now that you know everything involved in the dreaming stage, let's check off what you're currently doing. Which elements are you showing up in — and where do you still have room to grow?</p>
+  <div class="checklist-box">
+    <p class="checklist-category">AI + Search</p>
+    <ul class="checklist">
+      <li>I have one focused H1 on every key page targeting a primary keyword</li>
+      <li>My Google Business Profile is fully set up and I'm updating it monthly</li>
+      <li>I'm publishing blog content written for what my guests are actually searching</li>
+      <li>My website loads in under 2.5 seconds on mobile</li>
+      <li>I'm running Google Search campaigns targeting high-intent keywords for my top tours</li>
+      <li>My landing pages match the exact messaging of my ads</li>
+    </ul>
+    <p class="checklist-category-after">Social & Video</p>
+    <ul class="checklist">
+      <li>I'm posting at least 5 times per week on Instagram and Facebook</li>
+      <li>I have a system for collecting real video content from my guides and guests</li>
+      <li>I'm producing short-form video content regularly</li>
+      <li>I'm running paid social ads to reach cold audiences and retarget warm ones</li>
+      <li>I'm responding to comments and DMs consistently</li>
+    </ul>
+    <p class="checklist-category-after">Referral, Print & External</p>
+    <ul class="checklist">
+      <li>I have a referral program in place for past guests</li>
+      <li>I'm actively nurturing at least 5–10 local reseller relationships</li>
+      <li>I have a partner pack ready to share with hotels and concierges</li>
+      <li>I'm listed on the OTAs that make sense for my market</li>
+      <li>I know what percentage of my bookings come from each channel</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- STAGE 2 -->
+<div id="stage2" class="stage-header">
+  <div class="stage-header-inner">
+    <div class="stage-badge">Stage 02</div>
+    <h2 class="stage-title">Planning: How People Evaluate & Compare You</h2>
+    <p class="stage-desc">This is where most operators lose bookings without ever realizing it. Someone found you — they're interested. Now everything in this stage determines whether they feel confident choosing you or quietly move on to a competitor.</p>
+    <div class="core-question">
+      <div class="core-question-label">Core Question</div>
+      <div class="core-question-text">When someone lands on your site, do they feel confident choosing you?</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">88%</div><div class="stat-card-label">Of travelers abandon a confusing or hard-to-navigate website</div></div>
+    <div class="stat-card"><div class="stat-card-num">96%</div><div class="stat-card-label">Of website visitors are not ready to book on their first visit</div></div>
+    <div class="stat-card"><div class="stat-card-num">50%</div><div class="stat-card-label">More sales from companies that nurture leads vs those that don't</div></div>
+    <div class="stat-card"><div class="stat-card-num">70%</div><div class="stat-card-label">Increase in conversions from remarketing campaigns</div></div>
+  </div>
+
+  <div class="sub-stage"><div class="sub-stage-line"></div><div class="sub-stage-label">Planning — Website Conversion</div><div class="sub-stage-line"></div></div>
+  <h3>Website Conversion</h3>
+  <p>A conversion-focused website continually drives visitors to our key product pages. Your website isn't a brochure — it's a sales tool.</p>
+  <h4>The 5-point website audit every operator should run:</h4>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Is it clear what you offer in 3 seconds?</h4><p>Your headline and hero section should communicate who you are, what you do, and where — immediately.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Can I see price and duration immediately?</h4><p>Guests are comparing options across multiple tabs. If pricing is buried, they go to the next tab.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Do I trust this company right away?</h4><p>Review counts, years in business, awards, real guest photos — these belong near your Book Now button.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Are my photos and videos doing the selling?</h4><p>Authentic visuals of real guests on real trips are more persuasive than any copy. Stock photos kill trust instantly.</p></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Do I know exactly what to do next?</h4><p>Every page needs one primary call to action. Five competing options means guests choose nothing.</p></div></div>
+  </div>
+
+  <div class="case-study">
+    <div class="cs-eyebrow">Case Study</div>
+    <div class="cs-title">Grand Canyon Expeditions — A Website That Finally Converts</div>
+    <div class="cs-desc">Grand Canyon Expeditions had strong brand equity but a website disconnected from their booking system, difficult to update, and creating friction at the exact moment guests were ready to commit. After rebuilding with ResmarkWeb, the results were immediate.</div>
+    <div class="cs-stats">
+      <div class="cs-stat"><div class="cs-stat-num">231%</div><div class="cs-stat-label">Increase in purchasers (first 90 days)</div></div>
+      <div class="cs-stat"><div class="cs-stat-num">15.8%</div><div class="cs-stat-label">Increase in search visibility</div></div>
+      <div class="cs-stat"><div class="cs-stat-num">469K</div><div class="cs-stat-label">Search impressions (+34%)</div></div>
+    </div>
+    <div class="cs-quote">"There was such a separation between our website and Resmark reservations. Now it's seamless." — Allison Carlin, Marketing Director</div>
+    <a href="https://www.resmarkweb.com/grand-canyon-expeditions-case-study" class="cs-link">Read the full case study →</a>
+  </div>
+
+  <div class="sub-stage"><div class="sub-stage-line"></div><div class="sub-stage-label">Planning — Not Booked</div><div class="sub-stage-line"></div></div>
+  <h3>Compelling Lead Magnets</h3>
+  <p>Compelling lead magnets capture high-quality leads online from our ideal guests. If 96% of visitors aren't ready to book, your job is to capture them before they leave — and give them something genuinely valuable in return.</p>
+
+  <div class="card-grid">
+    <div class="card"><div class="card-title">Expedition Kanab</div><div class="card-body">A simple 5-day Kanab itinerary — top trails, hidden gems, local tips. Result: 4,000+ new leads captured in 2025 alone.</div></div>
+    <div class="card"><div class="card-title">Moab Adventure Center</div><div class="card-body">"Moab Insider's Guide" and email series. Result: 10,000+ new names and emails captured every year.</div></div>
+    <div class="card"><div class="card-title">Whitewater Voyages</div><div class="card-body">A quiz that matches guests to the right trip based on group type, experience level, and adventure preference.</div></div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-text">"I know what people ask because I've answered the phones for five years straight. I took that knowledge and made it into a 5-day itinerary. Now it's generating thousands of leads on autopilot."</div>
+    <div class="callout-attr">— Rhees Jackson, Expedition Kanab</div>
+  </div>
+
+  <div style="margin:32px 0;border-radius:12px;overflow:hidden;">
+    <video controls style="width:100%;display:block;border-radius:12px;" preload="metadata">
+      <source src="Pictures/How%20Lead%20Magnets%20Turn%20Traffic%20Into%20Bookings.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="sub-stage"><div class="sub-stage-line"></div><div class="sub-stage-label">Planning — Follow Up</div><div class="sub-stage-line"></div></div>
+  <h3>Lead Follow-Up Sequence</h3>
+  <p>Automated lead nurture sequences follow up and convert prospects into bookings. Getting someone's email is the beginning, not the end.</p>
+
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">60%+</div><div class="stat-card-label">Average open rate on automated lead nurture sequences</div></div>
+    <div class="stat-card"><div class="stat-card-num">20%+</div><div class="stat-card-label">Average click-through rate</div></div>
+    <div class="stat-card"><div class="stat-card-num">3x</div><div class="stat-card-label">Higher engagement vs standard broadcast emails</div></div>
+    <div class="stat-card"><div class="stat-card-num">78.6%</div><div class="stat-card-label">Open rate on top email: "Top 10 Can't Miss Dinner Spots"</div></div>
+  </div>
+
+  <img src="Pictures/Lead Nurture Follow Up.png" style="width:100%;height:auto;border-radius:12px;margin:28px 0;display:block;object-fit:contain;" alt="Lead Nurture Follow Up Sequence">
+
+  <h4>What a high-performing sequence looks like:</h4>
+  <ul class="bullet-list">
+    <li>10 emails over a daily cadence in the first 10 days after sign-up</li>
+    <li>Mix of genuinely helpful content and soft tour promotion</li>
+    <li>Plain-text format often outperforms designed emails — feels personal, not promotional</li>
+    <li>Each email has one clear call to action</li>
+    <li>Non-bookers move into a long-term monthly nurture sequence</li>
+  </ul>
+
+  <h3>Email Marketing</h3>
+  <p>Email is still one of the highest ROI marketing channels, period — and most tour operators are dramatically underusing it. Email marketing outside of referrals is consistently a top lead driver. You own the data, you control the message, and you're not at the mercy of any algorithm.</p>
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">50%</div><div class="stat-card-label">Of marketers say email is their most impactful channel</div></div>
+    <div class="stat-card"><div class="stat-card-num">30–36%</div><div class="stat-card-label">Average open rates from people who opted into your lead magnet or newsletter</div></div>
+  </div>
+  <p>Think of your email marketing in three distinct groups: <strong>Prospects</strong> (opted in but haven't booked yet), <strong>New Customers</strong> (just booked — keep them engaged and excited), and <strong>Past Guests</strong> (bring them back and turn them into advocates). Each group deserves a different message.</p>
+  <ul class="bullet-list">
+    <li>Plain text emails often outperform designed ones — they feel personal, not promotional, and drive higher response</li>
+    <li>Understand your sales cycle: a single-day tour might need 2–3 emails; a multi-day expedition might need months of nurture</li>
+    <li>Send at minimum a monthly email to your full list — seasonal promotions, new trips, local destination guides</li>
+    <li>Segment by interest and trip type — relevant messaging dramatically increases open rates and bookings</li>
+    <li>Automate follow-ups for every new lead: availability checkers, inquiry forms, and lead magnet downloads all deserve a sequence</li>
+    <li>Use one clear call to action per email, and track clicks and bookings — not just opens</li>
+  </ul>
+
+  <div class="podcast-ref">
+    <div class="podcast-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-1 13V8l6 4-6 4z"/></svg></div>
+    <div class="podcast-text">
+      <div class="podcast-label">Go Deeper</div>
+      <div class="podcast-title">Lead Nurturing & Ongoing Emails: How Tour Operators Turn Leads Into Bookings</div>
+      <a href="https://www.resmarkweb.com/podcast/lead-nurturing-ongoing-emails" class="podcast-link">resmarkweb.com/podcast/lead-nurturing-ongoing-emails →</a>
+    </div>
+  </div>
+
+  <h3>Remarketing Ads</h3>
+  <p>Here's the reality: 98% of website visitors don't convert on their first visit. Remarketing lets you stay in front of people who already visited your site — people who already know who you are — without paying for cold traffic all over again. Most tour operators are missing this entirely.</p>
+  <p><strong>Step one: install your tracking.</strong> Your Meta Pixel and Google Tag are small pieces of code that track what visitors do on your site. Without them, remarketing is impossible. Even if you're not running ads yet, install these now — so you're building your audience while you wait.</p>
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">20–40%</div><div class="stat-card-label">Lower cost per acquisition vs cold audience campaigns</div></div>
+    <div class="stat-card"><div class="stat-card-num">6–15x</div><div class="stat-card-label">Better return on ad spend vs cold audience campaigns</div></div>
+    <div class="stat-card"><div class="stat-card-num">$5–10</div><div class="stat-card-label">Per day is enough to start — remarketing doesn't require a big budget</div></div>
+  </div>
+  <ul class="bullet-list">
+    <li>Don't remarket everyone — focus on high-intent visitors: people who viewed specific tour pages or started booking</li>
+    <li>Build separate audiences for tour page viewers, cart abandoners, lead magnet downloaders, and past guests</li>
+    <li>Show tour-specific ads based on the exact page they visited — relevance is what makes remarketing work</li>
+    <li>Messaging should reassure, handle objections, and use social proof — let your guests sell for you</li>
+    <li>Use layered messaging: reminder → social proof (guest testimonial video) → urgency/offer</li>
+    <li>Use frequency caps so you stay top of mind without being annoying — 3 times per week is a good starting point</li>
+    <li>Exclude guests who already booked to avoid wasted spend and confusion</li>
+    <li>Refresh creative every 30–45 days to avoid ad fatigue</li>
+  </ul>
+
+  <div class="podcast-ref">
+    <div class="podcast-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18A9 9 0 0012 3zm-1 13V8l6 4-6 4z"/></svg></div>
+    <div class="podcast-text">
+      <div class="podcast-label">Go Deeper</div>
+      <div class="podcast-title">How Retargeting Ads Bring Tour Guests Back to Book</div>
+      <a href="https://www.resmarkweb.com/podcast/retargeting-ads-tour-operators" class="podcast-link">resmarkweb.com/podcast/retargeting-ads-tour-operators →</a>
+    </div>
+  </div>
+
+  <h3>Planning Stage Checklist</h3>
+  <p style="font-size:16px;color:#555;margin-bottom:4px;">Now that you've seen everything that goes into the planning stage, it's time to take stock of where you are. Which of these do you have dialed in — and which ones are still costing you bookings you've already earned?</p>
+  <div class="checklist-box">
+    <p class="checklist-category">Website Conversion</p>
+    <ul class="checklist">
+      <li>My website clearly communicates what I offer, where, and who it's for — within 3 seconds</li>
+      <li>Every tour page shows price, duration, and key details without requiring scrolling</li>
+      <li>I'm using real photos and videos of actual guests — not stock imagery</li>
+      <li>Every page has one clear, prominent call to action</li>
+      <li>I have AI or live chat set up to answer questions instantly</li>
+    </ul>
+    <p class="checklist-category-after">Lead Capture</p>
+    <ul class="checklist">
+      <li>I have at least one lead magnet capturing emails from visitors who aren't ready to book</li>
+      <li>My lead magnet provides genuine value — a real planning resource, not just a discount</li>
+      <li>My lead magnet is prominently featured on my website with a clear opt-in</li>
+    </ul>
+    <p class="checklist-category-after">Follow Up</p>
+    <ul class="checklist">
+      <li>I have an automated email sequence that follows up with every new lead</li>
+      <li>I'm sending regular email campaigns to past guests and prospects</li>
+      <li>I have the Facebook Pixel and Google Tag installed on my website</li>
+      <li>I'm running retargeting ads for people who visited tour pages but didn't book</li>
+      <li>My messaging is consistent across email, social, and paid ads</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- STAGE 3 -->
+<div id="stage3" class="stage-header">
+  <div class="stage-header-inner">
+    <div class="stage-badge">Stage 03</div>
+    <h2 class="stage-title">Booking: How People Convert</h2>
+    <p class="stage-desc">This is where friction kills revenue. Someone is ready to book — they've done their research, they trust you, they want to go. Every unnecessary step, every moment of confusion, every mobile hiccup is costing you bookings you've already earned.</p>
+    <div class="core-question">
+      <div class="core-question-label">Core Question</div>
+      <div class="core-question-text">How easy is it for someone to actually book right now?</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">67%</div><div class="stat-card-label">Of travelers will pay more if the experience aligns with their values</div></div>
+    <div class="stat-card"><div class="stat-card-num">36%</div><div class="stat-card-label">Lower cart abandonment with a simple checkout progress bar</div></div>
+    <div class="stat-card"><div class="stat-card-num">14%</div><div class="stat-card-label">Conversion lift from urgency phrases when used correctly</div></div>
+    <div class="stat-card"><div class="stat-card-num">42%</div><div class="stat-card-label">More clicks when trust signals are near the Book Now button</div></div>
+  </div>
+
+  <div class="sub-stage"><div class="sub-stage-line"></div><div class="sub-stage-label">Booking — Offline</div><div class="sub-stage-line"></div></div>
+  <h3>Offline Booking</h3>
+  <ul class="bullet-list">
+    <li>Document proven phone scripts for handling common pre-booking questions and objections</li>
+    <li>Train your team on urgency language: "We do have availability this weekend, but it fills up fast"</li>
+    <li>Follow up every phone inquiry with an email recap and a clear next step</li>
+    <li>Track offline bookings separately so you understand the full picture of your sales channels</li>
+    <li>Respond to every inquiry within 1 hour — response speed is one of the biggest drivers of conversion</li>
+  </ul>
+
+  <h3>Upsell</h3>
+  <ul class="bullet-list">
+    <li>Train your team to offer one relevant add-on during every booking call</li>
+    <li>Frame upsells as recommendations: "Most guests doing this trip also add..."</li>
+    <li>Have a short list of 2–3 upsell options ready for every tour type</li>
+  </ul>
+
+  <div class="sub-stage"><div class="sub-stage-line"></div><div class="sub-stage-label">Booking — Online</div><div class="sub-stage-line"></div></div>
+
+  <div style="background:#f8f8f6;border:1px solid #e8e8e4;border-radius:14px;padding:28px;margin:28px 0;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#F97316;margin-bottom:8px;">Free Webinar</div>
+    <div style="font-size:20px;font-weight:800;margin-bottom:8px;">How Tour Operators Turn Website Visitors Into Bookings</div>
+    <p style="font-size:15px;color:#555;margin-bottom:16px;">Watch the replay and learn the exact strategies top-performing operators use to convert more traffic into confirmed bookings.</p>
+    <img src="Pictures/webinar.png" style="width:100%;height:auto;border-radius:10px;margin-bottom:16px;display:block;object-fit:contain;" alt="How Tour Operators Turn Website Visitors Into Bookings Webinar">
+    <a href="https://www.resmarksystems.com/webinar/convert-website-visitors-into-tour-bookings" target="_blank" style="display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">Watch the Replay →</a>
+  </div>
+
+  <h3>Descriptions & Pricing</h3>
+  <p>Before a guest ever clicks Book Now, your tour copy and pricing have to do the selling. The words on your product pages should speak directly to your ideal customer — not to everyone. Generic descriptions ("a fun day on the river") convert like generic ads. Descriptions that sound like they were written for one specific person convert.</p>
+  <p>Your pricing presentation matters as much as the price itself. Anchoring, framing, and what's included shape whether your tour feels like a deal or a stretch — even when the dollar amount is identical.</p>
+  <ul class="bullet-list">
+    <li>Write for your ICP — name the trip type, the experience level, and the kind of guest it's built for ("first-timers welcome," "for serious paddlers," "family-friendly with ages 6+")</li>
+    <li>Lead with the outcome and emotion, not the itinerary — what will they feel, see, and remember?</li>
+    <li>Show what's included vs. what's extra so the price feels complete, not surprising</li>
+    <li>Anchor premium options against your most popular tour so guests can see the value step-up</li>
+    <li>Use guest language — pull phrases from your top reviews and bake them into your descriptions</li>
+    <li>Keep pricing consistent everywhere — tour page, booking flow, confirmation, and any partner listings</li>
+    <li>If you offer dynamic or seasonal pricing, explain why briefly — clarity prevents sticker shock</li>
+    <li>Test one tour page at a time: rewrite the headline and first paragraph, then watch conversion for 30 days</li>
+  </ul>
+
+  <h3>Product View</h3>
+  <p>Product pages are designed for conversion with urgency triggers and risk reducers. Your tour pages are your best salespeople — make sure they're doing the job.</p>
+  <ul class="bullet-list">
+    <li>High-quality video and image gallery showing real guests on real trips</li>
+    <li>Price, duration, and key details visible without scrolling</li>
+    <li>Star ratings and review counts placed near the Book Now button</li>
+    <li>Cancellation policy clearly visible before they click to book</li>
+    <li>Urgency signals: "Only 4 spots remaining" or "Most popular trip this summer"</li>
+    <li>FAQ section addressing the top questions guests ask before booking</li>
+  </ul>
+
+  <h3>Online Booking</h3>
+  <p>Your online checkout process needs to be fast, mobile-optimized, and built for your products. The best booking flows stay on your website, match your brand, and get guests from "I want this" to "booking confirmed" with as little friction as possible.</p>
+
+  <div class="card-grid">
+    <div class="card"><div class="card-title">Stay on your website</div><div class="card-body">Sending guests off to a third-party platform that looks nothing like your site creates doubt at the worst possible moment.</div></div>
+    <div class="card"><div class="card-title">Show a progress bar</div><div class="card-body">Guests want to know how close they are to done. A simple progress bar reduces abandonment by up to 36%.</div></div>
+    <div class="card"><div class="card-title">Auto-fill & mobile optimize</div><div class="card-body">Every field that requires typing on mobile is a drop-off point. Minimize required fields and enable auto-fill.</div></div>
+    <div class="card"><div class="card-title">Reinforce trust at checkout</div><div class="card-body">Don't stop showing reviews and guarantees once they click Book Now. Doubt peaks at checkout — counter it.</div></div>
+  </div>
+
+  <div style="text-align:center;margin:28px 0;">
+    <img src="Pictures/Moab Booking Flow .png" style="max-width:600px;width:100%;height:auto;border-radius:12px;display:inline-block;object-fit:contain;" alt="Moab Adventure Center — Booking Flow (Step 1 & Step 2)">
+  </div>
+
+  <div style="margin:0 0 28px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;display:none;">
+      <!-- Step 1 -->
+      <div style="border:1px solid #e8e8e4;border-radius:10px;overflow:hidden;background:#f5f0e8;">
+        <!-- Progress bar -->
+        <div style="background:#fff;border-bottom:1px solid #e8e8e4;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;">
+            <div style="background:#8b1a1a;color:#fff;text-align:center;padding:8px 4px;clip-path:polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);">
+              <div style="font-size:8px;color:rgba(255,255,255,.7);">Step 1</div>
+              <div style="font-size:10px;font-weight:800;">DETAILS</div>
+            </div>
+            <div style="text-align:center;padding:8px 4px;color:#aaa;">
+              <div style="font-size:8px;">Step 2</div>
+              <div style="font-size:10px;font-weight:700;">PAYMENT</div>
+            </div>
+            <div style="text-align:center;padding:8px 4px;color:#aaa;">
+              <div style="font-size:8px;">Step 3</div>
+              <div style="font-size:10px;font-weight:700;">CONFIRMATION</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 140px;gap:10px;padding:12px;">
+          <!-- Left -->
+          <div>
+            <div style="font-size:11px;font-weight:800;color:#1a1a1a;margin-bottom:8px;">Full-Day Moab Rafting Adventure with BBQ Lunch</div>
+            <div style="display:flex;gap:6px;margin-bottom:8px;">
+              <div style="border:1px solid #ccc;border-radius:4px;padding:4px 8px;font-size:9px;color:#555;background:#fff;">👤 1 Adult ▾</div>
+              <div style="border:1px solid #ccc;border-radius:4px;padding:4px 8px;font-size:9px;color:#555;background:#fff;">📅 April 10, 2026 ▾</div>
+            </div>
+            <div style="display:flex;gap:0;margin-bottom:8px;">
+              <div style="background:#8b1a1a;color:#fff;font-size:9px;font-weight:700;padding:4px 10px;border-radius:4px 0 0 4px;">No Pickup</div>
+              <div style="background:#fff;border:1px solid #ccc;color:#555;font-size:9px;padding:4px 10px;border-radius:0 4px 4px 0;">Pickup</div>
+            </div>
+            <div style="background:#fff;border-radius:6px;padding:8px;border:1px solid #e8e8e4;">
+              <div style="font-size:9px;color:#333;line-height:1.5;"><strong>Begins:</strong> 8:00 AM at Moab Adventure Center<br><strong>Ends:</strong> 3:00 PM — Approximate end time</div>
+            </div>
+            <div style="background:#fff;border-radius:6px;padding:8px;border:1px solid #e8e8e4;margin-top:6px;">
+              <div style="font-size:9px;font-weight:700;color:#1a1a1a;margin-bottom:3px;">Lifejacket Policy</div>
+              <div style="font-size:8px;color:#555;line-height:1.4;">All guests required to wear US Coast Guard-approved PFDs at all times while on the water.</div>
+            </div>
+            <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-size:10px;font-weight:800;color:#8b1a1a;">TOTAL: $155.00</div>
+              <div style="background:#8b1a1a;color:#fff;font-size:9px;font-weight:700;padding:6px 12px;border-radius:4px;">ADD TO CART</div>
+            </div>
+          </div>
+          <!-- Right sidebar -->
+          <div>
+            <div style="background:#fff;border-radius:8px;border:1px solid #e8e8e4;overflow:hidden;margin-bottom:8px;">
+              <div style="height:60px;background:linear-gradient(135deg,#1e5a8e,#3b82f6);"></div>
+              <div style="padding:8px;">
+                <div style="font-size:9px;font-weight:700;color:#1a1a1a;margin-bottom:4px;">Full-Day Moab Rafting Adventure with BBQ Lunch</div>
+                <div style="display:flex;gap:4px;margin-bottom:4px;flex-wrap:wrap;">
+                  <span style="background:#dc2626;color:#fff;font-size:7px;font-weight:700;padding:2px 6px;border-radius:3px;">Likely to sell out</span>
+                  <span style="border:1px solid #ccc;font-size:7px;padding:2px 6px;border-radius:3px;">♥ Top Rated</span>
+                </div>
+                <div style="color:#f59e0b;font-size:9px;">★★★★½ <span style="color:#888;font-size:8px;">4.9 (1,090)</span></div>
+                <div style="font-size:11px;font-weight:800;color:#1a1a1a;margin-top:3px;">FROM: $155</div>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:8px;border:1px solid #e8e8e4;padding:8px;text-align:center;margin-bottom:8px;">
+              <div style="font-size:16px;font-weight:800;color:#8b1a1a;">22</div>
+              <div style="font-size:7px;font-weight:700;color:#8b1a1a;text-transform:uppercase;line-height:1.2;">Consecutive Winner<br>Best of State</div>
+              <div style="border-top:1px dashed #ccc;margin:6px 0;padding-top:6px;font-size:7px;color:#888;">TripAdvisor Travelers' Choice Awards</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div style="border:1px solid #e8e8e4;border-radius:10px;overflow:hidden;background:#f5f0e8;">
+        <!-- Progress bar -->
+        <div style="background:#fff;border-bottom:1px solid #e8e8e4;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;">
+            <div style="text-align:center;padding:8px 4px;color:#888;">
+              <div style="font-size:8px;">✓ Step 1</div>
+              <div style="font-size:10px;font-weight:700;">DETAILS</div>
+            </div>
+            <div style="background:#8b1a1a;color:#fff;text-align:center;padding:8px 4px;">
+              <div style="font-size:8px;color:rgba(255,255,255,.7);">Step 2</div>
+              <div style="font-size:10px;font-weight:800;">PAYMENT</div>
+            </div>
+            <div style="text-align:center;padding:8px 4px;color:#aaa;">
+              <div style="font-size:8px;">Step 3</div>
+              <div style="font-size:10px;font-weight:700;">CONFIRMATION</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 140px;gap:10px;padding:12px;">
+          <!-- Left -->
+          <div>
+            <div style="font-size:10px;font-weight:700;color:#888;margin-bottom:8px;">Shopping Cart</div>
+            <div style="background:#fff;border-radius:6px;border:1px solid #e8e8e4;padding:8px;margin-bottom:10px;display:flex;gap:8px;">
+              <div style="width:40px;height:40px;background:linear-gradient(135deg,#1e5a8e,#3b82f6);border-radius:4px;flex-shrink:0;"></div>
+              <div>
+                <div style="font-size:9px;font-weight:700;color:#1a1a1a;">Full-Day Moab Rafting Adventure with BBQ Lunch</div>
+                <div style="font-size:8px;color:#888;">Friday, April 10, 2026 · 8:00 AM to 3:00 PM · 1 Adult</div>
+                <div style="font-size:9px;font-weight:800;color:#1a1a1a;margin-top:2px;">$160.92</div>
+              </div>
+            </div>
+            <!-- Contact form -->
+            <div style="background:#fff;border-radius:6px;border:1px solid #e8e8e4;padding:10px;margin-bottom:8px;">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+                <div style="width:18px;height:18px;background:#8b1a1a;border-radius:50%;color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;">1</div>
+                <div style="font-size:10px;font-weight:700;color:#1a1a1a;">Contact Details</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px;">
+                <div style="border:1px solid #ccc;border-radius:3px;padding:5px 7px;font-size:8px;color:#aaa;background:#fff;">First Name</div>
+                <div style="border:1px solid #ccc;border-radius:3px;padding:5px 7px;font-size:8px;color:#aaa;background:#fff;">Last Name</div>
+              </div>
+              <div style="border:1px solid #ccc;border-radius:3px;padding:5px 7px;font-size:8px;color:#aaa;background:#fff;margin-bottom:4px;">Email</div>
+              <div style="border:1px solid #ccc;border-radius:3px;padding:5px 7px;font-size:8px;color:#aaa;background:#fff;">Phone</div>
+            </div>
+            <!-- Terms -->
+            <div style="background:#fff;border-radius:6px;border:1px solid #e8e8e4;padding:10px;">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+                <div style="width:18px;height:18px;background:#8b1a1a;border-radius:50%;color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;">2</div>
+                <div style="font-size:10px;font-weight:700;color:#1a1a1a;">Terms and Policies</div>
+              </div>
+              <div style="font-size:8px;color:#888;margin-bottom:6px;">By confirming this booking, you agree to the following terms and policies.</div>
+              <div style="border:1px solid #e8e8e4;border-radius:3px;padding:5px 7px;font-size:8px;color:#555;margin-bottom:3px;">▶ Cancellation, Payment and Refund Policies</div>
+              <div style="border:1px solid #e8e8e4;border-radius:3px;padding:5px 7px;font-size:8px;color:#555;margin-bottom:3px;">▶ Minimum Trip Capacity</div>
+              <div style="border:1px solid #e8e8e4;border-radius:3px;padding:5px 7px;font-size:8px;color:#555;">▶ Guest Responsibilities</div>
+            </div>
+          </div>
+          <!-- Right sidebar -->
+          <div>
+            <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;padding:8px;margin-bottom:8px;text-align:center;">
+              <div style="font-size:8px;color:#92400e;font-weight:700;">We'll hold your spot for <strong>14:48</strong> minutes.</div>
+            </div>
+            <div style="background:#fff;border-radius:8px;border:1px solid #e8e8e4;padding:10px;margin-bottom:8px;">
+              <div style="font-size:11px;font-weight:800;color:#1a1a1a;margin-bottom:2px;">Order Total $160.92</div>
+              <div style="font-size:8px;color:#888;margin-bottom:8px;">All taxes and fees included</div>
+              <div style="color:#f59e0b;font-size:9px;margin-bottom:8px;">★★★★½ 4.9 (1,090)</div>
+              <div style="font-size:8px;color:#16a34a;font-weight:700;margin-bottom:3px;">✓ Best Price. Guaranteed.</div>
+              <div style="font-size:7px;color:#555;margin-bottom:6px;">Book directly with Moab Adventure Center for the best rates.</div>
+              <div style="font-size:8px;color:#16a34a;font-weight:700;margin-bottom:3px;">✓ Decades of Expertise</div>
+              <div style="font-size:7px;color:#555;margin-bottom:6px;">We've been honing the perfect adventures since 1961.</div>
+              <div style="font-size:8px;color:#16a34a;font-weight:700;margin-bottom:3px;">✓ Utah's Best Adventures</div>
+              <div style="font-size:7px;color:#555;">Voted best adventure company for 22 consecutive years.</div>
+            </div>
+            <div style="background:#fff;border-radius:8px;border:1px solid #e8e8e4;padding:8px;text-align:center;">
+              <div style="font-size:16px;font-weight:800;color:#8b1a1a;">22</div>
+              <div style="font-size:7px;font-weight:700;color:#8b1a1a;text-transform:uppercase;line-height:1.2;">Consecutive Winner<br>Best of State</div>
+              <div style="border-top:1px dashed #ccc;margin:5px 0;padding-top:5px;font-size:7px;color:#888;">TripAdvisor Travelers' Choice Awards</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:12px;">
+      <a href="https://www.moabadventurecenter.com/tours/colorado-river-rafting-full-day" target="_blank" style="display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;font-size:13px;font-weight:700;padding:10px 24px;border-radius:8px;text-decoration:none;">See Live Booking Flow →</a>
+    </div>
+  </div>
+
+  <h3>Upsell</h3>
+  <ul class="bullet-list">
+    <li>Present one recommendation immediately after confirmation — don't interrupt the booking flow itself</li>
+    <li>Include reviews on the upsell offer to build confidence</li>
+    <li>Frame it with social proof: "Most guests who book this also add..."</li>
+    <li>Track average order value and test different offers over time</li>
+  </ul>
+
+  <h3>Booking Stage Checklist</h3>
+  <p style="font-size:16px;color:#555;margin-bottom:4px;">You've done the work to get people to this point — don't lose them at the finish line. How many of these booking stage elements do you have working for you right now?</p>
+  <div class="checklist-box">
+    <p class="checklist-category">Offline Booking</p>
+    <ul class="checklist">
+      <li>My team has documented scripts for handling common pre-booking questions</li>
+      <li>I'm responding to every inquiry within 1 hour during business hours</li>
+      <li>My team knows how to offer a relevant upsell on every booking call</li>
+      <li>I'm tracking offline bookings separately so I understand my full channel mix</li>
+    </ul>
+    <p class="checklist-category-after">Descriptions & Pricing</p>
+    <ul class="checklist">
+      <li>My tour descriptions speak directly to my ideal customer profile</li>
+      <li>My copy leads with the experience and outcome, not just the itinerary</li>
+      <li>Pricing is clear, consistent, and shows what's included vs. extra</li>
+      <li>I've pulled language from real guest reviews into my product pages</li>
+    </ul>
+    <p class="checklist-category-after">Online Booking</p>
+    <ul class="checklist">
+      <li>My booking flow stays on my website and matches my brand visually</li>
+      <li>I can complete a booking on mobile in under 3 minutes without confusion</li>
+      <li>My checkout shows a progress bar so guests know how close they are to done</li>
+      <li>I'm displaying trust signals and reviews within the checkout flow</li>
+      <li>My tour pricing is clear and consistent from the tour page through to checkout</li>
+      <li>I have a post-booking upsell in place to increase average order value</li>
+      <li>I have AI or live chat capturing and answering leads after hours</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- STAGE 4 -->
+<div id="stage4" class="stage-header">
+  <div class="stage-header-inner">
+    <div class="stage-badge">Stage 04</div>
+    <h2 class="stage-title">Experiencing: The Actual Tour or Activity</h2>
+    <p class="stage-desc">This is your product — and it directly fuels your reviews, referrals, and repeat business. The experience stage begins the moment someone books and doesn't end until they've shared how it went.</p>
+    <div class="core-question">
+      <div class="core-question-label">Core Question</div>
+      <div class="core-question-text">Does the experience live up to — or exceed — what you sold?</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">70%</div><div class="stat-card-label">Of guest satisfaction influenced before the trip even begins</div></div>
+    <div class="stat-card"><div class="stat-card-num">3x</div><div class="stat-card-label">More likely to get a 5-star review when guests are prepared before arrival</div></div>
+    <div class="stat-card"><div class="stat-card-num">30–50%</div><div class="stat-card-label">Reduction in support calls from automated pre-arrival messages</div></div>
+    <div class="stat-card"><div class="stat-card-num">27%</div><div class="stat-card-label">Increase in return visits from personalized post-purchase communications</div></div>
+  </div>
+
+  <h3>Optimized Confirmation</h3>
+  <ul class="bullet-list">
+    <li>Include a personal video welcome from the lead guide or owner</li>
+    <li>Confirm all key details clearly: date, time, meeting location, what to expect</li>
+    <li>Add a "you're going to love this" moment — a highlight reel, a guest story, a stunning image</li>
+    <li>Set expectations around what to bring, difficulty level, and any prep they should do</li>
+  </ul>
+
+  <h3>Post-Purchase Messages</h3>
+  <ul class="bullet-list">
+    <li>Insider tips and local restaurant recommendations in the days immediately after booking</li>
+    <li>What makes this trip special — help guests feel great about their decision</li>
+    <li>Payment notifications sent automatically — guests aren't left wondering</li>
+    <li>Any relevant destination or condition updates as the trip approaches</li>
+  </ul>
+
+  <div style="text-align:center;margin:28px 0;">
+    <img src="Pictures/Email Trip Prep.png" style="max-width:420px;width:100%;height:auto;border-radius:12px;display:inline-block;object-fit:contain;" alt="Email Trip Prep — Getting Guests Ready for Their Adventure">
+    <p style="font-size:14px;color:#888;margin-top:10px;font-style:italic;">This pre-trip prep email was sent to get Nikki's (Marketing Director at Resmark) father physically ready for an upcoming expedition.</p>
+  </div>
+
+  <h3>Real-Time Notifications</h3>
+  <p>Between booking and trip day, guests have questions, balances to pay, and details that change. Real-time email and SMS notifications keep them informed without forcing them to call or dig through their inbox — and let them act on payments and updates in seconds, from their phone.</p>
+  <p>This is one of the most underused parts of the guest journey. Operators who automate it see fewer support calls, faster balance payments, and dramatically higher guest confidence heading into the trip.</p>
+  <ul class="bullet-list">
+    <li>Send automated payment reminders with a one-tap pay link — no logging in, no hunting for an invoice</li>
+    <li>Confirm every payment in real time so guests know it went through and don't double-pay</li>
+    <li>Use SMS for time-sensitive updates: weather changes, meeting location adjustments, water levels, road conditions</li>
+    <li>Keep email for richer content: itinerary changes, packing updates, anything that benefits from formatting</li>
+    <li>Let guests update their own party details (names, ages, dietary needs) through a secure link rather than email back-and-forth</li>
+    <li>Send a same-day "we're ready for you" message with weather, parking, and meeting point — even if nothing changed</li>
+    <li>Brand every message — "Your tour" not "Your booking #48291" — so it feels like a guide texting, not a system</li>
+    <li>Respect frequency — guests should hear from you when something matters, not constantly</li>
+  </ul>
+
+  <h3>Pre-Trip Messages</h3>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>1–2 weeks out</h4><p>Packing list, what to wear, meeting location, weather notes, and "what to expect" content. This alone reduces support calls by 30–50%.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Day before</h4><p>A short, warm message with final logistics, any last-minute weather or conditions notes, and genuine excitement.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Waiver completion reminder</h4><p>Automated waiver reminders ensure paperwork is done before arrival — no delays, no awkward check-in moments.</p></div></div>
+  </div>
+
+  <div style="text-align:center;margin:28px 0;">
+    <img src="Pictures/Waiver Western River.png" style="max-width:420px;width:100%;height:auto;border-radius:12px;display:inline-block;object-fit:contain;" alt="Waiver Completion — Western River Expeditions">
+  </div>
+
+  <h3>Trip Experience</h3>
+  <ul class="bullet-list">
+    <li>Guide quality is your single biggest variable — invest in training, culture, and retention</li>
+    <li>Small "surprise and delight" moments are disproportionately memorable — standardize your best ones</li>
+    <li>The check-in process sets the tone — make it smooth, personal, and welcoming</li>
+    <li>Equipment, safety, and logistics need to be consistently flawless — these are table stakes</li>
+    <li>Capture content during trips — it fuels your Dreaming and Sharing stages</li>
+  </ul>
+
+  <h3>Experiencing Stage Checklist</h3>
+  <p style="font-size:16px;color:#555;margin-bottom:4px;">We know most tour operators are delivering an amazing experience on the trail or on the water — but the experience stage goes far beyond the tour itself. How many of these do you have in place?</p>
+  <div class="checklist-box">
+    <p class="checklist-category">Confirmation & Post-Purchase</p>
+    <ul class="checklist">
+      <li>My booking confirmation includes more than just logistics — it builds excitement</li>
+      <li>I have an automated post-purchase email sequence that runs in the days after booking</li>
+      <li>Payment and waiver notifications are automated — no manual follow-up required</li>
+    </ul>
+    <p class="checklist-category-after">Real-Time Notifications</p>
+    <ul class="checklist">
+      <li>Guests can pay balances with a one-tap link from email or SMS</li>
+      <li>I use SMS for time-sensitive updates (weather, meeting location, conditions)</li>
+      <li>Guests can update their own party details through a secure link</li>
+      <li>Every payment is confirmed in real time so guests never wonder if it went through</li>
+    </ul>
+    <p class="checklist-category-after">Pre-Trip</p>
+    <ul class="checklist">
+      <li>I send a pre-trip reminder 1–2 weeks out with packing list, meeting location, and what to expect</li>
+      <li>I send a day-before reminder with any last-minute details</li>
+      <li>Waivers are completed before guests arrive — no delays at check-in</li>
+    </ul>
+    <p class="checklist-category-after">Trip Experience</p>
+    <ul class="checklist">
+      <li>My guides are trained, consistent, and delivering a standardized excellent experience</li>
+      <li>I have documented "surprise and delight" moments built into every trip</li>
+      <li>My check-in process is smooth, personal, and sets a positive tone immediately</li>
+      <li>I'm actively capturing content during trips to fuel my marketing</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- STAGE 5 -->
+<div id="stage5" class="stage-header">
+  <div class="stage-header-inner">
+    <div class="stage-badge">Stage 05</div>
+    <h2 class="stage-title">Sharing: What Happens After the Experience</h2>
+    <p class="stage-desc">This is your growth multiplier — and most operators underuse it badly. Reviews, referrals, user-generated content, and repeat bookings don't happen by accident. They happen because you have a system to activate them.</p>
+    <div class="core-question">
+      <div class="core-question-label">Core Question</div>
+      <div class="core-question-text">Are your customers turning into your marketing engine?</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">93%</div><div class="stat-card-label">Of travelers read reviews before booking</div></div>
+    <div class="stat-card"><div class="stat-card-num">1.7x</div><div class="stat-card-label">Higher local search ranking for businesses replying to 100% of reviews</div></div>
+    <div class="stat-card"><div class="stat-card-num">3x</div><div class="stat-card-label">More reviews with an automated post-trip sequence</div></div>
+    <div class="stat-card"><div class="stat-card-num">28%</div><div class="stat-card-label">Boost in social conversions from user-generated content</div></div>
+  </div>
+
+  <h3>Guest Review Sequence</h3>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>SMS within 24 hours</h4><p>Short, personal, direct link to Google. One ask, one link. Keep it warm and human — not automated-sounding.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Email at 48 hours</h4><p>A thank-you email with a helpful resource (local dining guide, next trip discount) and multiple review channel options.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Final reminder at 7 days</h4><p>A gentle nudge for those who haven't reviewed yet. Remind them why their review helps other families find this experience.</p></div></div>
+  </div>
+
+  <h3>Review Monitoring & Reply</h3>
+  <div class="callout">
+    <div class="callout-text">"When I see a one-star review, I look at how the company responded. If they handled it well, I trust them more than a business with only perfect reviews."</div>
+    <div class="callout-attr">— Corey Jay, Marketing Director at Zebulon LLC</div>
+  </div>
+
+  <div style="margin:32px 0;border-radius:12px;overflow:hidden;">
+    <video controls style="width:100%;display:block;border-radius:12px;" preload="metadata">
+      <source src="Pictures/truth-about-reviews.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <ul class="bullet-list">
+    <li>Respond to 100% of reviews — businesses that do rank 1.7x higher in local search</li>
+    <li>Responding to negative reviews increases advocacy by 70%</li>
+    <li>Use a single dashboard to aggregate reviews from Google, TripAdvisor, and other sources</li>
+    <li>Use AI as a starting point for responses — but always add a human touch before posting</li>
+    <li>Create a dedicated reviews page on your website that aggregates all sources</li>
+  </ul>
+
+  <h3>Post-Trip Message Sequence</h3>
+  <ul class="bullet-list">
+    <li>Send a post-trip follow-up with photos or a highlight from their trip if you captured it</li>
+    <li>Include a "bring a friend" referral offer</li>
+    <li>Add guests to a long-term nurture sequence with seasonal inspiration and exclusive offers</li>
+    <li>Create a repeat booking campaign — past guests convert at significantly higher rates than cold traffic</li>
+    <li>Segment your list by trip type for more relevant follow-up content</li>
+  </ul>
+
+  <h3>Merchandise</h3>
+  <p>82% of travelers say souvenirs increase their emotional connection to a brand. Well-designed merchandise gives guests something tangible to take home. Use print-on-demand fulfillment for zero inventory risk.</p>
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-card-num">5–15%</div><div class="stat-card-label">Additional revenue from merchandise</div></div>
+    <div class="stat-card"><div class="stat-card-num">17–25%</div><div class="stat-card-label">Conversion rate in the travel and experience sector</div></div>
+    <div class="stat-card"><div class="stat-card-num">82%</div><div class="stat-card-label">Of travelers say souvenirs increase brand connection</div></div>
+  </div>
+
+  <h3>User-Generated Content</h3>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Ask permission during the trip</h4><p>If you see a guest taking great photos or video, ask if they'd be willing to share. Most people say yes when asked directly.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Incentivize guides to capture content</h4><p>Western River Expeditions offers $20 per piece of content submitted by guides. One video got 1.5 million views.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Run an annual photo contest</h4><p>Four Season Guides runs a yearly photo contest — $1,250 first prize, $500 second — generating hundreds of authentic guest images all year.</p>
+      <div style="text-align:center;margin:12px 0;">
+        <img src="Pictures/Photo competition.png" style="max-width:380px;width:100%;height:auto;border-radius:10px;display:inline-block;object-fit:contain;" alt="Four Season Guides Annual Photo Contest">
+        <div style="margin-top:12px;">
+          <a href="https://www.fsguides.com/photo-contest-entry" target="_blank" style="display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">View the Contest Page →</a>
+        </div>
+      </div>
+    </div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Repurpose everything</h4><p>Guest photos and videos become social posts, website galleries, email headers, and ad creatives. One great piece of content fuels a dozen marketing touchpoints.</p></div></div>
+  </div>
+
+  <h3>Sharing Stage Checklist</h3>
+  <p style="font-size:16px;color:#555;margin-bottom:4px;">Your guests just had an incredible experience — now let's make sure that experience keeps working for you. Reviews, referrals, and content don't happen automatically. Which of these systems do you have in place to turn every guest into your best marketer?</p>
+  <div class="checklist-box">
+    <p class="checklist-category">Reviews</p>
+    <ul class="checklist">
+      <li>I have an automated post-trip review sequence that goes out within 24–48 hours</li>
+      <li>My review request links directly to the Google review entry — not just my profile</li>
+      <li>I'm responding to 100% of my reviews, positive and negative</li>
+      <li>I have a dedicated reviews page on my website aggregating all sources</li>
+    </ul>
+    <p class="checklist-category-after">Post-Trip & UGC</p>
+    <ul class="checklist">
+      <li>I have a post-trip email sequence that nurtures past guests toward a return booking</li>
+      <li>I have a referral program or "bring a friend" offer in place</li>
+      <li>I have a system for collecting photos and videos from guides during trips</li>
+      <li>I'm repurposing guest content across social media, email, and my website</li>
+    </ul>
+    <p class="checklist-category-after">Merchandise</p>
+    <ul class="checklist">
+      <li>I have at least one branded merchandise product available for guests to purchase</li>
+      <li>I'm offering merchandise at checkout or in my post-trip sequence</li>
+      <li>I'm using print-on-demand fulfillment so there's zero inventory risk</li>
+    </ul>
+  </div>
+
+</div>
+
+<hr class="divider">
+
+<div style="background:#f8f8f6;">
+<div class="section">
+  <div class="section-label">The Full Picture</div>
+  <h2 class="section-title">Putting It All Together</h2>
+  <p style="font-size:17px;color:#555;line-height:1.8;margin-bottom:28px;">The Resmark Growth Engine isn't five separate strategies — it's one connected system. Every stage feeds the next, and the operators seeing the most growth are the ones who've built all five working in sync.</p>
+
+  <div class="card-grid">
+    <a href="#stage1" class="card" style="text-decoration:none;color:inherit;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F97316;margin-bottom:6px;">Stage 01</div>
+      <div class="card-title">Dreaming</div>
+      <div class="card-body">Getting in front of the right people before they even know they want to book — through SEO, AI search, paid and organic social, video, referrals, print, and OTAs. Visibility is where everything starts.</div>
+    </a>
+    <a href="#stage2" class="card" style="text-decoration:none;color:inherit;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F97316;margin-bottom:6px;">Stage 02</div>
+      <div class="card-title">Planning</div>
+      <div class="card-body">Converting curious visitors into confident buyers — through a high-converting website, compelling lead magnets, smart email nurturing, and remarketing that keeps you top of mind until they're ready.</div>
+    </a>
+    <a href="#stage3" class="card" style="text-decoration:none;color:inherit;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F97316;margin-bottom:6px;">Stage 03</div>
+      <div class="card-title">Booking</div>
+      <div class="card-body">Removing every obstacle between "I want this" and "booking confirmed" — both online and offline. A frictionless booking experience is one of the fastest wins available to any tour operator.</div>
+    </a>
+    <a href="#stage4" class="card" style="text-decoration:none;color:inherit;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F97316;margin-bottom:6px;">Stage 04</div>
+      <div class="card-title">Experiencing</div>
+      <div class="card-body">Delivering an experience that starts the moment someone books — with smart confirmations, pre-trip messages, and a tour that lives up to everything you sold. This stage fuels every stage that follows.</div>
+    </a>
+    <a href="#stage5" class="card" style="text-decoration:none;color:inherit;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F97316;margin-bottom:6px;">Stage 05</div>
+      <div class="card-title">Sharing</div>
+      <div class="card-body">Activating guests to become your best marketers — through review sequences, UGC, referral programs, and a post-trip system that keeps them connected to your brand long after the trip ends.</div>
+    </a>
+  </div>
+
+  <p style="font-size:17px;color:#555;line-height:1.8;margin:32px 0 8px;">The operators winning right now aren't doing everything at once — they're building each stage deliberately, measuring what works, and compounding their results over time. Pick your weakest stage and start there.</p>
+</div>
+</div>
+
+<div style="background:#fff;">
+<div class="section">
+  <div class="section-label">What's Next</div>
+  <h2 class="section-title">Your Growth Engine Starts Here</h2>
+  <p style="font-size:17px;color:#555;line-height:1.8;margin-bottom:24px;">You've just walked through the same framework that's been used to grow a $15M+ tour operation and hundreds of businesses like yours. The operators winning right now aren't doing everything at once — they're building each stage deliberately, measuring what works, and compounding their results over time.</p>
+  <div class="card-grid">
+    <div class="card"><div class="card-title">Take the Growth Assessment</div><div class="card-body">Get your personalized Growth Engine Health Score across all 5 stages. Free, instant, and specific to your business.<br><br><a href="https://www.resmarksystems.com/growth-engine-survey?utm_source=Lead+Magnet&utm_medium=Landing+Page&utm_campaign=diy+2026" style="font-weight:700;">Take it free →</a></div></div>
+    <div class="card"><div class="card-title">Listen to the Podcast</div><div class="card-body">Every episode goes deeper into one element of the Growth Engine with real operators sharing what's actually working right now.<br><br><a href="https://www.resmarkweb.com/podcast" style="font-weight:700;">Listen now →</a></div></div>
+    <div class="card"><div class="card-title">Book a Coaching Session</div><div class="card-body">Talk with the ResmarkWeb team about your specific situation. No pitch — just an honest look at where you are and what to do next.<br><br><a href="https://www.resmarksystems.com/demo-request?utm_source=Lead+Magnet&utm_medium=Landing+Page&utm_campaign=diy+2026" style="font-weight:700;">Book your session →</a></div></div>
+  </div>
+
+  <div class="cta-block" style="margin-top:48px;">
+    <h3>Where does your Growth Engine stand?</h3>
+    <p>Take the free 5-minute assessment and get a personalized score across all 5 stages — so you know exactly where to focus first.</p>
+    <a href="https://www.resmarksystems.com/growth-engine-survey?utm_source=Lead+Magnet&utm_medium=Landing+Page&utm_campaign=diy+2026" class="cta-btn">Get Your Free Growth Score</a>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  <div style="margin-bottom:16px;"><img src="Pictures/RESMARK Logo.png" style="height:48px;width:auto;object-fit:contain;" alt="Resmark Logo"></div>
+  <p>The growth platform for tour operators.<br>Website · SEO · Paid Ads · Booking Software · AI Optimization · CRO · Digital Waivers</p>
+  <p style="color:rgba(255,255,255,.7);font-size:14px;margin-top:8px;">Questions? Reach out anytime.<br>Call/Text: <a href="tel:+13854494079" style="color:#F5A623;font-weight:700;text-decoration:none;">385-449-4079</a> &nbsp;·&nbsp; <a href="mailto:nikki@resmarksystems.com" style="color:#F5A623;font-weight:700;text-decoration:none;">nikki@resmarksystems.com</a></p>
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'diyGuideChecklist_v1';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) { saved = {}; }
+  var items = document.querySelectorAll('.checklist li');
+  items.forEach(function(li, i){
+    var key = (li.textContent || '').trim().slice(0, 200) + '|' + i;
+    if (saved[key]) li.classList.add('checked');
+    li.setAttribute('role', 'checkbox');
+    li.setAttribute('tabindex', '0');
+    li.setAttribute('aria-checked', li.classList.contains('checked') ? 'true' : 'false');
+    function toggle(){
+      li.classList.toggle('checked');
+      var on = li.classList.contains('checked');
+      li.setAttribute('aria-checked', on ? 'true' : 'false');
+      saved[key] = on;
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(saved)); } catch(e) {}
+    }
+    li.addEventListener('click', toggle);
+    li.addEventListener('keydown', function(e){
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
