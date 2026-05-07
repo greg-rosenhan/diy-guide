@@ -14,7 +14,7 @@ body{font-family:'Montserrat',sans-serif;background:#fff;color:#1a1a1a;line-heig
 .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 70% 50%,rgba(232,57,14,.08) 0%,transparent 60%);pointer-events:none}
 .hero-badge{display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:6px 16px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
 .hero h1{font-size:52px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:800px;margin-left:auto;margin-right:auto}
-.hero h1 span{color:#F5A623}
+.hero h1 span{color:#F5A623;display:block}
 .hero-sub{font-size:18px;color:rgba(255,255,255,.7);max-width:600px;margin:0 auto 36px}
 .hero-cta{display:inline-block;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none}
 .hero-cta-sec{display:inline-block;background:transparent;color:#fff;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.3)}
@@ -111,8 +111,6 @@ img,iframe{max-width:100%}
   /* Hero */
   .hero{padding:48px 20px}
   .hero h1{font-size:30px;line-height:1.15}
-  .hero h1 br{display:none}
-  .hero h1 span::before{content:' '}
   .hero-sub{font-size:15px;margin-bottom:24px}
   .hero-cta,.hero-cta-sec{padding:12px 20px;font-size:14px;width:100%;max-width:320px;text-align:center}
   .hero-badge{font-size:11px;margin-bottom:18px}
@@ -226,7 +224,7 @@ a{color:#F97316}
 
 <section class="hero">
   <div class="hero-badge">2026 Edition</div>
-  <h1>The DIY Guide to Growing Your<br><span>Tour Business Online</span></h1>
+  <h1>The DIY Guide to Growing Your <span>Tour Business Online</span></h1>
   <p class="hero-sub">A step-by-step playbook built around the Resmark Growth Engine — the same framework used to grow a $15M+ tour company and hundreds of operators like yours.</p>
   <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px;">
     <a href="https://www.resmarksystems.com/growth-engine-survey?utm_source=Lead+Magnet&utm_medium=Landing+Page&utm_campaign=diy+2026" class="hero-cta">Get Your Free Growth Score</a>
