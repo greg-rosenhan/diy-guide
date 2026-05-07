@@ -95,25 +95,19 @@ body{font-family:'Montserrat',sans-serif;background:#fff;color:#1a1a1a;line-heig
 .step-content p{font-size:14px;color:#666;line-height:1.6;margin-bottom:0}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 html{scroll-behavior:smooth}
-.stage-header{scroll-margin-top:80px}
+.stage-header,#growth-engine{scroll-margin-top:80px}
 .podcast-link{word-break:break-word;overflow-wrap:anywhere}
 img,iframe{max-width:100%}
-/* Sticky section jump nav */
-.section-nav-toggle{position:fixed;bottom:20px;right:20px;z-index:200;background:linear-gradient(135deg,#E8390E,#F5A623);color:#fff;width:54px;height:54px;border-radius:50%;border:0;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);cursor:pointer;transition:transform .2s ease}
-.section-nav-toggle:hover{transform:scale(1.05)}
-.section-nav-toggle svg{width:24px;height:24px;fill:#fff}
-.section-nav-panel{position:fixed;bottom:84px;right:20px;z-index:199;background:#1a1a1a;border-radius:14px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.35);min-width:240px;opacity:0;transform:translateY(8px) scale(.96);pointer-events:none;transition:opacity .2s ease,transform .2s ease}
-.section-nav-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
-.section-nav-panel .snp-title{color:rgba(255,255,255,.5);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 10px 10px}
-.section-nav-panel a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;text-decoration:none;color:#fff;font-size:14px;font-weight:600;transition:background .15s ease}
-.section-nav-panel a:hover{background:rgba(245,166,35,.18)}
-.section-nav-panel a .snp-num{font-size:11px;font-weight:800;color:#F5A623;min-width:22px}
+/* Quick Navigation pill — scroll triggered */
+.quick-nav{position:fixed;bottom:20px;left:50%;transform:translate(-50%,80px);z-index:200;background:linear-gradient(90deg,#E8390E,#F5A623);color:#fff;padding:12px 20px;border-radius:999px;border:0;font-family:inherit;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+.quick-nav.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.quick-nav svg{width:14px;height:14px;fill:#fff}
 @media(max-width:680px){
   .two-col{grid-template-columns:1fr;gap:20px}
-  /* Nav */
-  .nav{padding:10px 16px}
-  .nav img{height:28px !important}
-  .nav-cta{padding:7px 12px;font-size:11px;letter-spacing:.2px}
+  /* Nav — center logo, hide CTA on mobile */
+  .nav{padding:12px 16px;justify-content:center}
+  .nav img{height:32px !important}
+  .nav-cta{display:none}
   /* Hero */
   .hero{padding:48px 20px}
   .hero h1{font-size:30px;line-height:1.15}
@@ -184,8 +178,6 @@ img,iframe{max-width:100%}
   .step{gap:12px;margin-bottom:18px}
   /* Footer */
   .footer{padding:36px 20px}
-  /* Section nav panel positioning on mobile */
-  .section-nav-panel{left:16px;right:16px;min-width:0}
 }
 @media(min-width:681px) and (max-width:960px){
   .nav{padding:14px 24px}
@@ -262,7 +254,7 @@ a{color:#F97316}
 </div>
 
 <!-- TOC -->
-<div class="toc">
+<div id="growth-engine" class="toc">
   <div class="toc-inner">
     <div class="toc-title">The Resmark Growth Engine</div>
     <div class="toc-sub">Five stages. Each with proven strategies. All working together.</div>
@@ -1274,42 +1266,30 @@ a{color:#F97316}
   <p style="color:rgba(255,255,255,.7);font-size:14px;margin-top:8px;">Questions? Reach out anytime.<br>Call/Text: <a href="tel:+13854494079" style="color:#F5A623;font-weight:700;text-decoration:none;">385-449-4079</a> &nbsp;·&nbsp; <a href="mailto:nikki@resmarksystems.com" style="color:#F5A623;font-weight:700;text-decoration:none;">nikki@resmarksystems.com</a></p>
 </div>
 
-<!-- Sticky section jump nav -->
-<div class="section-nav-panel" id="sectionNavPanel" role="dialog" aria-label="Jump to section" aria-hidden="true">
-  <div class="snp-title">Jump to Stage</div>
-  <a href="#stage1"><span class="snp-num">01</span><span>Dreaming</span></a>
-  <a href="#stage2"><span class="snp-num">02</span><span>Planning</span></a>
-  <a href="#stage3"><span class="snp-num">03</span><span>Booking</span></a>
-  <a href="#stage4"><span class="snp-num">04</span><span>Experiencing</span></a>
-  <a href="#stage5"><span class="snp-num">05</span><span>Sharing</span></a>
-</div>
-<button class="section-nav-toggle" id="sectionNavToggle" type="button" aria-label="Jump to a stage" aria-expanded="false" aria-controls="sectionNavPanel">
+<!-- Quick Navigation pill — appears once user starts scrolling -->
+<a class="quick-nav" id="quickNav" href="#growth-engine" aria-label="Quick navigation: jump to the Growth Engine stages">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
-</button>
+  <span>Quick Navigation</span>
+</a>
 
 <script>
 (function(){
-  var toggle = document.getElementById('sectionNavToggle');
-  var panel = document.getElementById('sectionNavPanel');
-  if (!toggle || !panel) return;
-  function setOpen(open){
-    panel.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+  var pill = document.getElementById('quickNav');
+  var engine = document.getElementById('growth-engine');
+  if (!pill || !engine) return;
+  // Show after user has scrolled past the top of the hero, hide once the
+  // Growth Engine section is on screen so it isn't redundant.
+  var threshold = 240;
+  function update(){
+    var scrolled = window.scrollY || window.pageYOffset || 0;
+    var rect = engine.getBoundingClientRect();
+    var inView = rect.top < window.innerHeight * 0.6 && rect.bottom > 0;
+    var showIt = scrolled > threshold && !inView;
+    pill.classList.toggle('show', showIt);
   }
-  toggle.addEventListener('click', function(e){
-    e.stopPropagation();
-    setOpen(!panel.classList.contains('open'));
-  });
-  panel.addEventListener('click', function(e){
-    if (e.target.closest('a')) setOpen(false);
-  });
-  document.addEventListener('click', function(e){
-    if (!panel.contains(e.target) && !toggle.contains(e.target)) setOpen(false);
-  });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') setOpen(false);
-  });
+  window.addEventListener('scroll', update, {passive: true});
+  window.addEventListener('resize', update);
+  update();
 })();
 </script>
 
